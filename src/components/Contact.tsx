@@ -1,8 +1,37 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Clock, Calendar, ArrowRight, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Clock, Calendar, ArrowRight, MessageCircle, Server, Send, Loader2 } from "lucide-react";
+import { useState, useEffect } from "react";
+import { apiService } from "../lib/api";
 
 export function Contact() {
+    const [apiStatus, setApiStatus] = useState<{ status: string; url?: string } | null>(null);
+    const [isSending, setIsSending] = useState(false);
+    const [sent, setSent] = useState(false);
+
+    useEffect(() => {
+        // Probar conexión al cargar
+        apiService.checkConnection().then(setApiStatus);
+    }, []);
+
+    const handleTestForm = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSending(true);
+        try {
+            await apiService.sendContactForm({
+                name: "Usuario de Prueba",
+                email: "test@example.com",
+                message: "Prueba de conexión con Vercel"
+            });
+            setSent(true);
+            setTimeout(() => setSent(false), 3000);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setIsSending(false);
+        }
+    };
+
     return (
         <section className="py-8 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -130,6 +159,55 @@ export function Contact() {
                     </motion.div>
 
                 </div>
+
+                {/* API Test Section (Solo visible con variables de entorno) */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="mt-12 max-w-4xl mx-auto bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
+                >
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div className="flex items-center gap-4">
+                            <div className={`p-3 rounded-full ${apiStatus?.status === 'ok' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+                                <Server className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-gray-900 uppercase text-xs tracking-widest">Estado de la API</h4>
+                                <p className="text-[10px] text-gray-500 font-medium">
+                                    {apiStatus?.status === 'ok'
+                                        ? `Conectado a: ${apiStatus.url}`
+                                        : 'Error: Variables VITE_API_* no configuradas'}
+                                </p>
+                            </div>
+                        </div>
+
+                        <form onSubmit={handleTestForm} className="flex gap-2">
+                            <button
+                                type="submit"
+                                disabled={isSending || apiStatus?.status !== 'ok'}
+                                className="inline-flex items-center gap-2 bg-blue-900 text-white font-bold py-2 px-4 rounded-xl hover:bg-blue-800 disabled:opacity-50 disabled:grayscale transition-all text-[11px] uppercase tracking-wider"
+                            >
+                                {isSending ? (
+                                    <>
+                                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                        Enviando...
+                                    </>
+                                ) : sent ? (
+                                    <>
+                                        <ArrowRight className="w-3.5 h-3.5 text-yellow-500" />
+                                        Enviado!
+                                    </>
+                                ) : (
+                                    <>
+                                        <Send className="w-3.5 h-3.5" />
+                                        Probar Envío
+                                    </>
+                                )}
+                            </button>
+                        </form>
+                    </div>
+                </motion.div>
 
             </div>
         </section>
