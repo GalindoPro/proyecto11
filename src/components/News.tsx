@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Users, Heart, Banknote, CheckCircle2, Building } from "lucide-react";
+import aculImg from "../assets/images/acul.jpg";
+import agenciaAculImg from "../assets/images/agencia_acul.jpg";
 
 export function News() {
     return (
@@ -92,7 +94,7 @@ export function News() {
                             {/* Image 1: Comunidad San Juan Acul */}
                             <div className="relative bg-gray-200 overflow-hidden group">
                                 <img
-                                    src="/src/assets/images/acul.jpg"
+                                    src={aculImg}
                                     alt="Comunidad San Juan Acul"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     onError={(e) => e.currentTarget.style.display = 'none'}
@@ -102,7 +104,7 @@ export function News() {
                             {/* Image 2: Agencia Acul */}
                             <div className="relative bg-gray-300 overflow-hidden group">
                                 <img
-                                    src="/src/assets/images/agencia_acul.jpg"
+                                    src={agenciaAculImg}
                                     alt="Agencia COMIF en Acul"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     onError={(e) => e.currentTarget.style.display = 'none'}

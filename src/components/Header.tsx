@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import logoImg from '../assets/images/logotiporl.png';
 
 const navItems = [
     { name: 'Inicio', href: '/', color: 'text-green-400', hColor: 'hover:text-green-300', bgColor: 'bg-green-500' },
@@ -61,7 +62,7 @@ export function Header() {
                 >
                     <div className="relative w-64 h-16 md:w-72 md:h-20 overflow-hidden rounded-xl bg-white flex items-center justify-center shadow-xl p-1.5 group-hover:scale-105 transition-transform duration-300">
                         <img
-                            src="/src/assets/images/logotiporl.png"
+                            src={logoImg}
                             alt="COMIF Logo"
                             className="w-full h-full object-contain"
                             onError={(e) => {

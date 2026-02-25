@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, MessageCircle, Navigation, Building2, X, Phone, Clock } from "lucide-react";
+import agenciaCentralImg from "../assets/images/AgenciaCentral.png";
+import agenciaChajulImg from "../assets/images/AgenciaChajul.png";
+import agenciaAculImg from "../assets/images/AgenciaAcul.png";
 
 const agencies = [
     {
@@ -9,7 +12,7 @@ const agencies = [
         name: "Agencia Central",
         address: "Cantón Vipila, Nebaj, Quiché, Guatemala",
         phone: "57481463",
-        image: "/src/assets/images/AgenciaCentral.png",
+        image: agenciaCentralImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B024'32.7%22N+91%C2%B008'44.6%22W/@15.4090833,-91.1457222,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4090833,-91.1457222&t=&z=17&ie=UTF8&iwloc=&output=embed",
         bg: "bg-blue-900",
@@ -24,7 +27,7 @@ const agencies = [
         name: "Agencia Chajul",
         address: "Cantón Ilom, Chajul, Quiché, Guatemala",
         phone: "30615489",
-        image: "/src/assets/images/AgenciaChajul.png",
+        image: agenciaChajulImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B029'08.6%22N+91%C2%B002'13.2%22W/@15.4857222,-91.037,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4857222,-91.037&t=&z=15&ie=UTF8&iwloc=&output=embed",
         bg: "bg-green-900",
@@ -39,7 +42,7 @@ const agencies = [
         name: "Agencia Acul",
         address: "Aldea Acul, Nebaj, Quiché, Guatemala",
         phone: "30371080",
-        image: "/src/assets/images/AgenciaAcul.png",
+        image: agenciaAculImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B024'21.1%22N+91%C2%B011'15.0%22W/@15.4058522,-91.1875071,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4058522,-91.1875071&t=&z=15&ie=UTF8&iwloc=&output=embed",
         bg: "bg-yellow-500",

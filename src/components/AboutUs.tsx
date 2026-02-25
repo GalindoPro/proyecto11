@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Users, Target, Scale, Award } from "lucide-react";
+import corazonIxilImg from "../assets/images/corazon_ixil.png";
+import raizIxilImg from "../assets/images/raiz_ixil.png";
+import misionImg from "../assets/images/mision.png";
+import visionImg from "../assets/images/vision.png";
 
 export function AboutUs() {
     return (
@@ -24,7 +28,7 @@ export function AboutUs() {
                         {/* Custom Icon: Mountain Heart */}
                         <div className="flex-shrink-0 bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/20 shadow-2xl">
                             <img
-                                src="/src/assets/images/corazon_ixil.png"
+                                src={corazonIxilImg}
                                 alt="Nebaj, Corazón Ixil"
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain"
                             />
@@ -43,7 +47,7 @@ export function AboutUs() {
                     >
                         <div className="flex-shrink-0 bg-white p-2 rounded-xl shadow-xl border border-yellow-200">
                             <img
-                                src="/src/assets/images/raiz_ixil.png"
+                                src={raizIxilImg}
                                 alt="Raíces Ixiles"
                                 className="w-24 h-24 md:w-32 md:h-32 object-contain"
                             />
@@ -67,7 +71,7 @@ export function AboutUs() {
                     >
                         <div className="flex-shrink-0 bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/20 shadow-2xl">
                             <img
-                                src="/src/assets/images/mision.png"
+                                src={misionImg}
                                 alt="Misión"
                                 className="w-20 h-20 object-contain shadow-lg rounded-lg"
                             />
@@ -89,7 +93,7 @@ export function AboutUs() {
                     >
                         <div className="flex-shrink-0 bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/20 shadow-2xl">
                             <img
-                                src="/src/assets/images/vision.png"
+                                src={visionImg}
                                 alt="Visión"
                                 className="w-20 h-20 object-contain shadow-lg rounded-lg"
                             />

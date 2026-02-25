@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import raizIxilImg from "../assets/images/raiz_ixil.png";
 
 export function HomeIntro() {
     return (
@@ -43,7 +44,7 @@ export function HomeIntro() {
 
                     <div className="flex-shrink-0 bg-white p-3 rounded-2xl shadow-2xl border-2 border-yellow-400 group-hover:rotate-3 transition-transform duration-500 relative z-10">
                         <img
-                            src="/src/assets/images/raiz_ixil.png"
+                            src={raizIxilImg}
                             alt="Raíces Ixiles"
                             className="w-20 h-20 md:w-24 md:h-24 object-contain"
                         />

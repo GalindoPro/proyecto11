@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import comifLogo from "../assets/images/comiflogo.png";
 
 export function Preloader() {
     const [loading, setLoading] = useState(true);
@@ -45,7 +46,7 @@ export function Preloader() {
                             className="relative w-64 h-64 bg-white p-6 rounded-3xl shadow-2xl flex items-center justify-center"
                         >
                             <img
-                                src="/src/assets/images/comiflogo.png"
+                                src={comifLogo}
                                 alt="COMIF Loading"
                                 className="w-full h-full object-contain"
                             />
