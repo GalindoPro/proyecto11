@@ -19,7 +19,7 @@ export function Preloader() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="fixed inset-0 z-[100] flex items-center justify-center bg-green-900"
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-blue"
                 >
                     <div className="relative">
                         {/* Pulsting Circle behind logo */}
@@ -31,7 +31,7 @@ export function Preloader() {
                                 repeat: Infinity,
                                 repeatType: "reverse",
                             }}
-                            className="absolute inset-0 bg-yellow-500 rounded-full blur-2xl"
+                            className="absolute inset-0 bg-brand-mustard rounded-full blur-2xl"
                         />
 
                         {/* Animated Logo */}
@@ -43,7 +43,7 @@ export function Preloader() {
                                 stiffness: 260,
                                 damping: 20,
                             }}
-                            className="relative w-64 h-64 bg-white p-6 rounded-3xl shadow-2xl flex items-center justify-center"
+                            className="relative w-64 h-64 bg-white/5 p-6 rounded-3xl shadow-2xl flex items-center justify-center"
                         >
                             <img
                                 src={comifLogo}
@@ -69,7 +69,7 @@ export function Preloader() {
                                             repeat: Infinity,
                                             delay: i * 0.2,
                                         }}
-                                        className="w-2 h-2 bg-yellow-400 rounded-full"
+                                        className="w-2 h-2 bg-brand-mustard/90 rounded-full"
                                     />
                                 ))}
                             </div>

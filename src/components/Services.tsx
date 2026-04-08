@@ -13,10 +13,10 @@ const services = [
             "Retiros disponibles",
             "Seguridad garantizada"
         ],
-        color: "bg-yellow-500 text-blue-900",
-        iconColor: "text-blue-900",
+        color: "bg-brand-mustard text-brand-blue",
+        iconColor: "text-brand-blue",
         buttonText: "Abrir cuenta",
-        buttonColor: "bg-blue-900 hover:bg-blue-800 text-white",
+        buttonColor: "bg-brand-blue hover:bg-brand-blue/80 text-white",
         delay: 0
     },
     {
@@ -30,10 +30,10 @@ const services = [
             "Aprobación rápida",
             "Sin penalización por pago"
         ],
-        color: "bg-green-900 text-white",
-        iconColor: "text-yellow-500",
+        color: "bg-white border-b border-brand-mustard/20 text-brand-blue",
+        iconColor: "text-brand-mustard",
         buttonText: "Solicitar crédito",
-        buttonColor: "bg-yellow-500 hover:bg-yellow-400 text-blue-900",
+        buttonColor: "bg-brand-mustard hover:bg-brand-mustard/90 text-white",
         delay: 0.1
     },
     {
@@ -47,17 +47,18 @@ const services = [
             "Tasas competitivas",
             "Asesoría personalizada"
         ],
-        color: "bg-blue-900 text-white",
-        iconColor: "text-yellow-500",
+        color: "bg-white border-b border-brand-mustard/20 text-brand-blue",
+        iconColor: "text-brand-mustard",
         buttonText: "Solicitar crédito",
-        buttonColor: "bg-yellow-500 hover:bg-yellow-400 text-blue-900",
+        buttonColor: "bg-brand-mustard hover:bg-brand-mustard/90 text-white",
         delay: 0.2
     }
 ];
 
 export function Services() {
     return (
-        <section id="servicios" className="py-12 bg-white">
+        <div className="flex flex-col">
+            <section id="servicios" className="py-12 bg-white">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center mb-8 max-w-3xl mx-auto">
@@ -65,7 +66,7 @@ export function Services() {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+                        className="text-2xl md:text-3xl font-bold text-brand-blue mb-2"
                     >
                         Nuestros Servicios
                     </motion.h2>
@@ -79,9 +80,14 @@ export function Services() {
                         Soluciones financieras para tu familia y comunidad.
                     </motion.p>
                 </div>
+                </div>
+            </section>
 
-                {/* Services Grid */}
-                <div className="grid md:grid-cols-3 gap-4">
+            {/* Services Grid */}
+            <section className="py-12 bg-brand-blue relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -translate-x-1/2 translate-y-1/2" />
+                <div className="container mx-auto px-4">
+                    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
@@ -128,7 +134,8 @@ export function Services() {
                         </motion.div>
                     ))}
                 </div>
-            </div>
-        </section>
+                    </div>
+            </section>
+        </div>
     );
 }

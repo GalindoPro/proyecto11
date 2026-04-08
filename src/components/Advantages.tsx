@@ -11,11 +11,11 @@ const advantages = [
         ),
         title: "SEGURIDAD",
         description: "Responsabilidad que construye futuro. Respaldo institucional garantizado para tu tranquilidad.",
-        color: "bg-blue-900",
-        textColor: "text-white",
-        iconContainer: "bg-white/10 border-white/20",
-        iconColor: "text-yellow-500",
-        accent: "bg-yellow-500"
+        color: "bg-white",
+        textColor: "text-brand-blue",
+        iconContainer: "bg-brand-mustard/10 border-brand-mustard/20",
+        iconColor: "text-brand-mustard",
+        accent: "bg-brand-mustard"
     },
     {
         icon: (
@@ -26,11 +26,11 @@ const advantages = [
         ),
         title: "TASAS COMPETITIVAS",
         description: "Rendimiento superior en tus ahorros y condiciones justas en todos tus créditos.",
-        color: "bg-yellow-500",
-        textColor: "text-blue-950",
-        iconContainer: "bg-white/40 border-white/60",
-        iconColor: "text-blue-900",
-        accent: "bg-blue-900"
+        color: "bg-brand-mustard",
+        textColor: "text-brand-blue",
+        iconContainer: "bg-white/20 border-white/40",
+        iconColor: "text-brand-blue",
+        accent: "bg-white"
     },
     {
         icon: (
@@ -42,24 +42,24 @@ const advantages = [
         ),
         title: "ATENCIÓN PERSONALIZADA",
         description: "Honestidad que genera confianza. Asesores expertos siempre dispuestos a guiarte.",
-        color: "bg-green-900",
-        textColor: "text-white",
-        iconContainer: "bg-white/10 border-white/20",
-        iconColor: "text-yellow-500",
-        accent: "bg-yellow-500"
+        color: "bg-white",
+        textColor: "text-brand-blue",
+        iconContainer: "bg-brand-mustard/10 border-brand-mustard/20",
+        iconColor: "text-brand-mustard",
+        accent: "bg-brand-mustard"
     },
 ];
 
 export function Advantages() {
     return (
-        <section className="py-8 bg-gray-50 relative overflow-hidden">
+        <section className="py-12 bg-brand-blue relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-6">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-extrabold text-green-900 uppercase tracking-tight"
+                        className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-tight"
                     >
                         Nuestra Ventaja
                     </motion.h2>
@@ -67,7 +67,7 @@ export function Advantages() {
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true }}
-                        className="h-1 w-16 bg-yellow-500 mx-auto mt-1 rounded-full"
+                        className="h-1 w-16 bg-brand-mustard mx-auto mt-1 rounded-full"
                     />
                 </div>
 

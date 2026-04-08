@@ -7,9 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2C5F2D", // Example: Forest Green
-        secondary: "#97BC62", // Example: Light Green
-        accent: "#D4A373", // Earthy tone
+        brand: {
+          blue: '#272757',
+          mustard: '#BF9903',
+        }
       },
     },
   },
