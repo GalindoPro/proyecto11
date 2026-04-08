@@ -33,7 +33,7 @@ export function FinancialContributions() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-green-900 tracking-tight"
+                        className="text-2xl md:text-3xl font-bold text-blue-900 tracking-tight"
                     >
                         Tu aporte, nuestra fuerza
                     </motion.h3>
@@ -42,7 +42,7 @@ export function FinancialContributions() {
                 <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
                     {[
                         { val: 100, label: "Aportación Externa", icon: <Wallet className="w-8 h-8 text-blue-900" />, color: "text-blue-900", bg: "bg-yellow-500" },
-                        { val: 50, label: "Cuota de Ingreso", icon: <PiggyBank className="w-8 h-8 text-yellow-500" />, color: "text-white", bg: "bg-green-900" },
+                        { val: 50, label: "Cuota de Ingreso", icon: <PiggyBank className="w-8 h-8 text-blue-900" />, color: "text-blue-900", bg: "bg-white" },
                         { val: 25, label: "Infanto-Juvenil", icon: <Users className="w-8 h-8 text-yellow-500" />, color: "text-white", bg: "bg-blue-900" },
                     ].map((item, idx) => (
                         <div key={idx} className={`${item.bg || 'bg-white'} p-4 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group relative overflow-hidden`}>

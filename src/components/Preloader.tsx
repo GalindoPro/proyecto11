@@ -19,7 +19,7 @@ export function Preloader() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="fixed inset-0 z-[100] flex items-center justify-center bg-green-900"
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-blue-900"
                 >
                     <div className="relative">
                         {/* Pulsting Circle behind logo */}

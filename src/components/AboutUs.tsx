@@ -17,7 +17,7 @@ export function AboutUs() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-green-900 p-4 md:p-6 rounded-xl shadow-lg flex flex-col-reverse md:flex-row items-center gap-6"
+                        className="bg-blue-900 p-4 md:p-6 rounded-xl shadow-lg flex flex-col-reverse md:flex-row items-center gap-6"
                     >
                         <div className="flex-1">
                             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 text-center md:text-left">Nebaj, corazón ixil</h3>
@@ -55,7 +55,7 @@ export function AboutUs() {
                         <div className="flex-1">
                             <h3 className="text-xl md:text-2xl font-extrabold text-blue-900 mb-2 text-center md:text-left uppercase tracking-tight">Raíces ixiles y origen institucional</h3>
                             <p className="text-blue-900 leading-relaxed text-base md:text-lg text-center md:text-left italic font-bold">
-                                "Desde <span className="text-yellow-600 font-black">2008</span>, 28 visionarios locales dieron vida a <span className="text-green-700 font-black not-italic">COMIF, R.L.</span>, hoy referente de <span className="text-blue-700 font-bold">confianza</span> en la región Ixil."
+                                "Desde <span className="text-yellow-600 font-black">2008</span>, 28 visionarios locales dieron vida a <span className="text-blue-900 font-black not-italic">COMIF, R.L.</span>, hoy referente de <span className="text-blue-700 font-bold">confianza</span> en la región Ixil."
                             </p>
                         </div>
                     </motion.div>
@@ -89,9 +89,9 @@ export function AboutUs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-green-900 text-white p-6 rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-5 shadow-lg"
+                        className="bg-white text-blue-900 p-6 rounded-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-5 shadow-lg border border-blue-100"
                     >
-                        <div className="flex-shrink-0 bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/20 shadow-2xl">
+                        <div className="flex-shrink-0 bg-blue-50 p-2 rounded-xl backdrop-blur-sm border border-blue-100 shadow-xl">
                             <img
                                 src={visionImg}
                                 alt="Visión"
@@ -99,8 +99,8 @@ export function AboutUs() {
                             />
                         </div>
                         <div>
-                            <h3 className="text-2xl font-bold mb-2 text-white uppercase tracking-wider">Visión</h3>
-                            <p className="text-white/90 leading-relaxed text-base">
+                            <h3 className="text-2xl font-bold mb-2 text-blue-900 uppercase tracking-wider">Visión</h3>
+                            <p className="text-blue-900/90 leading-relaxed text-base">
                                 Ser la cooperativa líder en financiamiento rural, con equidad de género y servicios que promuevan el desarrollo integral.
                             </p>
                         </div>
@@ -115,7 +115,7 @@ export function AboutUs() {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                            <Award className="w-6 h-6 text-green-700" />
+                            <Award className="w-6 h-6 text-yellow-600" />
                             Autoridades y Estructura
                         </h3>
                         <ul className="space-y-3">
@@ -148,9 +148,9 @@ export function AboutUs() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {[
                                 { title: "Responsabilidad", desc: "construye futuro", color: "bg-blue-900", textColor: "text-white", accent: "text-yellow-500" },
-                                { title: "Honestidad", desc: "genera confianza", color: "bg-green-900", textColor: "text-white", accent: "text-yellow-500" },
+                                { title: "Honestidad", desc: "genera confianza", color: "bg-white border text-blue-900", textColor: "text-blue-900", accent: "text-yellow-500" },
                                 { title: "Igualdad", desc: "para todos", color: "bg-yellow-500", textColor: "text-blue-900", accent: "text-blue-700" },
-                                { title: "Integridad", desc: "en cada acción", color: "bg-blue-50", textColor: "text-green-900", accent: "text-green-700" }
+                                { title: "Integridad", desc: "en cada acción", color: "bg-blue-50", textColor: "text-blue-900", accent: "text-blue-700" }
                             ].map((val, idx) => (
                                 <div key={idx} className={`${val.color} p-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center transition-transform hover:scale-105 duration-300`}>
                                     <span className={`font-black uppercase tracking-widest text-base mb-0.5 ${val.textColor}`}>{val.title}</span>

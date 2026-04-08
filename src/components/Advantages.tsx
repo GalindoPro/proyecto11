@@ -42,9 +42,9 @@ const advantages = [
         ),
         title: "ATENCIÓN PERSONALIZADA",
         description: "Honestidad que genera confianza. Asesores expertos siempre dispuestos a guiarte.",
-        color: "bg-green-900",
-        textColor: "text-white",
-        iconContainer: "bg-white/10 border-white/20",
+        color: "bg-white",
+        textColor: "text-blue-900",
+        iconContainer: "bg-blue-900/10 border-blue-900/20",
         iconColor: "text-yellow-500",
         accent: "bg-yellow-500"
     },
@@ -59,7 +59,7 @@ export function Advantages() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-extrabold text-green-900 uppercase tracking-tight"
+                        className="text-2xl md:text-3xl font-extrabold text-blue-900 uppercase tracking-tight"
                     >
                         Nuestra Ventaja
                     </motion.h2>

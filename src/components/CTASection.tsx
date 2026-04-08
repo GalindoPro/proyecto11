@@ -6,7 +6,7 @@ export function CTASection() {
     return (
         <section className="py-12 relative overflow-hidden">
             {/* Artistic Background */}
-            <div className="absolute inset-0 bg-green-900">
+            <div className="absolute inset-0 bg-blue-900">
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
                 <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-yellow-500 rounded-full blur-[120px] opacity-20" />
                 <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-500 rounded-full blur-[120px] opacity-20" />

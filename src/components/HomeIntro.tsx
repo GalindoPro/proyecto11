@@ -54,7 +54,7 @@ export function HomeIntro() {
                             Raíces Ixiles y Origen Institucional
                         </h3>
                         <p className="text-blue-900 leading-relaxed text-base md:text-lg italic font-semibold">
-                            "Desde <span className="bg-white/40 px-2 py-0.5 rounded text-blue-950 not-italic font-black">2008</span>, 28 visionarios locales dieron vida a <span className="text-green-900 font-black not-italic">COMIF, R.L.</span>, hoy referente de <span className="underline decoration-green-900 decoration-2 underline-offset-2">confianza</span> en la región Ixil."
+                            "Desde <span className="bg-white/40 px-2 py-0.5 rounded text-blue-950 not-italic font-black">2008</span>, 28 visionarios locales dieron vida a <span className="text-blue-900 font-black not-italic">COMIF, R.L.</span>, hoy referente de <span className="underline decoration-blue-900 decoration-2 underline-offset-2">confianza</span> en la región Ixil."
                         </p>
                     </div>
                 </motion.div>

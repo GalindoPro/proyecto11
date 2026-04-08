@@ -58,7 +58,7 @@ export function Quote() {
                                 <motion.div
                                     whileHover={{ scale: 1.02 }}
                                     onClick={() => setView('investment')}
-                                    className="bg-green-900 p-8 rounded-3xl shadow-xl border border-green-800 cursor-pointer group relative overflow-hidden"
+                                    className="bg-white p-8 rounded-3xl shadow-xl border border-blue-100 cursor-pointer group relative overflow-hidden"
                                 >
                                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
                                         <TrendingUp className="w-24 h-24" />
@@ -66,10 +66,10 @@ export function Quote() {
                                     <div className="bg-white/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-yellow-500">
                                         <TrendingUp className="w-8 h-8" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white mb-3 uppercase tracking-tight">
+                                    <h3 className="text-2xl font-bold text-blue-900 mb-3 uppercase tracking-tight">
                                         Inversión Plazo Fijo
                                     </h3>
-                                    <p className="text-green-100/80 mb-8 text-sm leading-relaxed">
+                                    <p className="text-blue-900/80 mb-8 text-sm leading-relaxed">
                                         Calcula tu rendimiento con un 14% de interés anual garantizado para tu capital.
                                     </p>
                                     <div className="flex items-center gap-2 text-yellow-500 font-bold uppercase text-xs tracking-widest">
@@ -259,7 +259,7 @@ function LoanCalculator({ onBack }: { onBack: () => void }) {
                                         <p className="text-[10px] font-bold text-gray-400 uppercase mb-1">Interés Total</p>
                                         <p className="text-xl font-black text-red-600">Q {schedule.reduce((acc, row) => acc + row.interest, 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                                     </div>
-                                    <div className="bg-green-600 p-4 rounded-2xl shadow-md border border-green-500">
+                                    <div className="bg-blue-600 p-4 rounded-2xl shadow-md border border-blue-500">
                                         <p className="text-[10px] font-bold text-white/70 uppercase mb-1 text-nowrap">Total Estimado</p>
                                         <p className="text-xl font-black text-white">Q {(Number(amount) + schedule.reduce((acc, row) => acc + row.interest, 0)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                                     </div>
@@ -298,7 +298,7 @@ function LoanCalculator({ onBack }: { onBack: () => void }) {
                                                         <td className="p-4 text-[11px] font-bold text-gray-600 text-center">
                                                             {row.no > 0 ? `Q ${row.principal.toLocaleString('en-US', { minimumFractionDigits: 2 })}` : '--'}
                                                         </td>
-                                                        <td className="p-4 text-[11px] font-black text-green-700 text-center bg-blue-50/10 group-hover:bg-blue-50/20">
+                                                        <td className="p-4 text-[11px] font-black text-blue-700 text-center bg-blue-50/10 group-hover:bg-blue-50/20">
                                                             Q {row.balance.toLocaleString('en-US', { minimumFractionDigits: 2 })}
                                                         </td>
                                                     </tr>
@@ -345,7 +345,7 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
             exit={{ opacity: 0, x: 20 }}
             className="max-w-2xl mx-auto"
         >
-            <button onClick={onBack} className="flex items-center gap-2 text-green-900 font-bold mb-6 hover:translate-x-1 transition-transform uppercase text-xs">
+            <button onClick={onBack} className="flex items-center gap-2 text-blue-900 font-bold mb-6 hover:translate-x-1 transition-transform uppercase text-xs">
                 <ChevronLeft className="w-4 h-4" /> Volver a selección
             </button>
 
@@ -356,16 +356,16 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
                         <div className="space-y-6">
                             <div>
                                 <label className="block text-[10px] font-bold text-gray-400 uppercase mb-2">Capital (Q)</label>
-                                <input placeholder="500000" type="number" min="0" value={amount} onChange={(e) => { setAmount(e.target.value === '' ? '' : Math.max(0, Number(e.target.value))); setIsCalculated(false); }} className="w-full bg-gray-50 border-none rounded-xl p-3 font-bold text-blue-900 text-base focus:ring-2 focus:ring-green-600" />
+                                <input placeholder="500000" type="number" min="0" value={amount} onChange={(e) => { setAmount(e.target.value === '' ? '' : Math.max(0, Number(e.target.value))); setIsCalculated(false); }} className="w-full bg-gray-50 border-none rounded-xl p-3 font-bold text-blue-900 text-base focus:ring-2 focus:ring-blue-600" />
                             </div>
                             <div>
                                 <label className="block text-[10px] font-bold text-gray-400 uppercase mb-2">Plazo (Meses)</label>
-                                <input placeholder="12" type="number" min="0" max="100" value={months} onChange={(e) => { setMonths(e.target.value === '' ? '' : Math.min(100, Math.max(0, Number(e.target.value)))); setIsCalculated(false); }} className="w-full bg-gray-50 border-none rounded-xl p-3 font-bold text-blue-900 text-base focus:ring-2 focus:ring-green-600" />
+                                <input placeholder="12" type="number" min="0" max="100" value={months} onChange={(e) => { setMonths(e.target.value === '' ? '' : Math.min(100, Math.max(0, Number(e.target.value)))); setIsCalculated(false); }} className="w-full bg-gray-50 border-none rounded-xl p-3 font-bold text-blue-900 text-base focus:ring-2 focus:ring-blue-600" />
                                 <p className="text-[9px] text-gray-400 mt-1 uppercase font-bold">* Máximo 100 meses</p>
                             </div>
                             <div className="pt-2">
-                                <label className="block text-[10px] font-bold text-green-900 uppercase mb-2 opacity-50">Tasa Anual</label>
-                                <div className="w-full bg-green-50 border border-green-100 rounded-xl p-3 font-bold text-green-900 text-base flex items-center justify-between">
+                                <label className="block text-[10px] font-bold text-blue-900 uppercase mb-2 opacity-50">Tasa Anual</label>
+                                <div className="w-full bg-blue-50 border border-blue-100 rounded-xl p-3 font-bold text-blue-900 text-base flex items-center justify-between">
                                     <span>{FIXED_RATE}%</span>
                                     <TrendingUp className="w-4 h-4 opacity-30" />
                                 </div>
@@ -374,7 +374,7 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
                             <button
                                 onClick={handleCalculate}
                                 disabled={!amount || !months}
-                                className="w-full py-4 bg-green-900 text-white rounded-2xl font-black uppercase text-xs tracking-widest shadow-lg hover:bg-green-800 disabled:opacity-50 transition-all mt-4 flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-blue-900 text-white rounded-2xl font-black uppercase text-xs tracking-widest shadow-lg hover:bg-blue-800 disabled:opacity-50 transition-all mt-4 flex items-center justify-center gap-2"
                             >
                                 <RefreshCw className={cn("w-4 h-4", isCalculated ? "animate-spin-once" : "")} />
                                 Calcular Rendimiento
@@ -393,8 +393,8 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
                                 exit={{ opacity: 0 }}
                                 className="h-full bg-white rounded-3xl border border-dashed border-gray-200 flex flex-col items-center justify-center p-12 text-center"
                             >
-                                <div className="bg-green-50 w-20 h-20 rounded-full flex items-center justify-center mb-6">
-                                    <TrendingUp className="w-10 h-10 text-green-200" />
+                                <div className="bg-blue-50 w-20 h-20 rounded-full flex items-center justify-center mb-6">
+                                    <TrendingUp className="w-10 h-10 text-blue-200" />
                                 </div>
                                 <h4 className="text-xl font-bold text-gray-800 mb-2">Proyección de Inversión</h4>
                                 <p className="text-gray-500 text-sm max-w-sm leading-relaxed uppercase font-bold text-[10px] tracking-wider">
@@ -406,7 +406,7 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
                                 key="results-inv"
                                 initial={{ opacity: 0, scale: 0.98 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="bg-green-900 text-white p-8 rounded-3xl shadow-xl h-full relative overflow-hidden"
+                                className="bg-blue-900 text-white p-8 rounded-3xl shadow-xl h-full relative overflow-hidden"
                             >
                                 <div className="absolute -top-10 -right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl" />
                                 <div className="absolute bottom-10 -left-10 w-32 h-32 bg-yellow-500/5 rounded-full blur-2xl" />
@@ -419,22 +419,22 @@ function InvestmentCalculator({ onBack }: { onBack: () => void }) {
                                     <div className="space-y-6">
                                         <div className="grid grid-cols-2 gap-4 bg-black/20 p-3 rounded-xl border border-white/5">
                                             <div>
-                                                <label className="block text-[9px] font-bold text-green-100/50 uppercase mb-1 tracking-widest">Apertura</label>
+                                                <label className="block text-[9px] font-bold text-blue-100/50 uppercase mb-1 tracking-widest">Apertura</label>
                                                 <input type="date" value={startDate} onChange={(e) => { setStartDate(e.target.value); setIsCalculated(false); }} className="bg-transparent border-none p-0 text-white font-black text-xs w-full focus:ring-0" />
                                             </div>
                                             <div>
-                                                <label className="block text-[9px] font-bold text-green-100/50 uppercase mb-1 tracking-widest">Vencimiento</label>
+                                                <label className="block text-[9px] font-bold text-blue-100/50 uppercase mb-1 tracking-widest">Vencimiento</label>
                                                 <div className="text-yellow-500 font-black text-xs">{dueDate.toLocaleDateString()}</div>
                                             </div>
                                         </div>
                                         <div className="space-y-3">
                                             <div className="flex justify-between items-center border-b border-white/10 pb-3">
-                                                <p className="text-[9px] font-bold uppercase text-green-100/60 tracking-widest">Interés Bruto</p>
+                                                <p className="text-[9px] font-bold uppercase text-blue-100/60 tracking-widest">Interés Bruto</p>
                                                 <p className="text-lg font-black">Q {grossInterest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                                             </div>
                                             <div className="flex justify-between items-center border-b border-white/10 pb-3">
                                                 <div className="flex items-center gap-2" title="Impuesto sobre la renta según ley">
-                                                    <p className="text-[9px] font-bold uppercase text-green-100/60 tracking-widest">Impuesto (10% ISR)</p>
+                                                    <p className="text-[9px] font-bold uppercase text-blue-100/60 tracking-widest">Impuesto (10% ISR)</p>
                                                     <AlertCircle className="w-2.5 h-2.5 text-red-400" />
                                                 </div>
                                                 <p className="text-base font-bold text-red-300">- Q {tax.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>

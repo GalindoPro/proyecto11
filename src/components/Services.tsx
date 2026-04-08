@@ -30,10 +30,10 @@ const services = [
             "Aprobación rápida",
             "Sin penalización por pago"
         ],
-        color: "bg-green-900 text-white",
-        iconColor: "text-yellow-500",
+        color: "bg-white border-b text-blue-900",
+        iconColor: "text-blue-900",
         buttonText: "Solicitar crédito",
-        buttonColor: "bg-yellow-500 hover:bg-yellow-400 text-blue-900",
+        buttonColor: "bg-blue-900 hover:bg-blue-800 text-white",
         delay: 0.1
     },
     {

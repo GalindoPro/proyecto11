@@ -30,9 +30,9 @@ const agencies = [
         image: agenciaChajulImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B029'08.6%22N+91%C2%B002'13.2%22W/@15.4857222,-91.037,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4857222,-91.037&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        bg: "bg-green-900",
-        textColor: "text-white",
-        iconBtnBg: "bg-white/10 text-yellow-500 hover:bg-white/20",
+        bg: "bg-white",
+        textColor: "text-blue-900",
+        iconBtnBg: "bg-blue-900/10 text-yellow-600 hover:bg-blue-900/20",
         delay: 0.1,
         schedule: "Lun - Vie: 8:00 AM - 5:00 PM, Sáb: 8:00 AM - 12:00 PM"
     },

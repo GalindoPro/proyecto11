@@ -21,16 +21,16 @@ const slides = [
         buttonText: "Nuestros servicios",
         link: "/servicios",
         image: hero2,
-        btnClass: "bg-green-600/20 border-green-500/60 text-white hover:bg-green-600 hover:text-white",
-        shadowClass: "hover:shadow-green-600/40"
+        btnClass: "bg-white/20 border-white/60 text-white hover:bg-white hover:text-blue-900",
+        shadowClass: "hover:shadow-white/40"
     },
     {
         id: 3,
         buttonText: "Encuentra tu agencia",
         link: "/agencias",
         image: hero3,
-        btnClass: "bg-blue-600/20 border-blue-500/60 text-white hover:bg-blue-600 hover:text-white",
-        shadowClass: "hover:shadow-blue-600/40"
+        btnClass: "bg-blue-900/20 border-blue-900/60 text-white hover:bg-blue-900 hover:text-white",
+        shadowClass: "hover:shadow-blue-900/40"
     },
 ];
 

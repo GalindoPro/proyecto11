@@ -130,7 +130,7 @@ export function News() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="bg-green-900 p-6 rounded-2xl shadow-lg border border-green-800"
+                            className="bg-blue-950 p-6 rounded-2xl shadow-lg border border-blue-900"
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="bg-white/10 p-2 rounded-lg text-yellow-500">

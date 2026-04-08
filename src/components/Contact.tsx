@@ -73,7 +73,7 @@ export function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-green-900 p-4 rounded-xl shadow-lg border border-green-800 flex flex-col"
+                        className="bg-blue-950 p-4 rounded-xl shadow-lg border border-blue-900 flex flex-col"
                     >
                         <div className="bg-white/10 w-9 h-9 rounded-lg flex items-center justify-center mb-3 text-yellow-500">
                             <Clock className="w-4 h-4" />

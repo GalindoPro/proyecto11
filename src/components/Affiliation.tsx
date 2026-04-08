@@ -76,18 +76,18 @@ export function Affiliation() {
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-green-900 p-6 md:p-8 rounded-2xl shadow-lg border border-green-800"
+                            className="bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-blue-100"
                         >
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="bg-white/10 p-2 rounded-xl text-yellow-500">
                                     <UserPlus className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-bold text-white uppercase tracking-tight">Pasos Simples</h3>
+                                <h3 className="text-xl font-bold text-blue-900 uppercase tracking-tight">Pasos Simples</h3>
                             </div>
 
                             <div className="relative">
                                 {/* Connector Line */}
-                                <div className="absolute left-5 top-4 bottom-4 w-0.5 bg-white/20"></div>
+                                <div className="absolute left-5 top-4 bottom-4 w-0.5 bg-blue-100"></div>
 
                                 <div className="space-y-6 relative">
                                     {[
@@ -100,8 +100,8 @@ export function Affiliation() {
                                                 {i + 1}
                                             </div>
                                             <div className="pt-0.5">
-                                                <h4 className="text-base font-bold text-white uppercase tracking-tight">{step.title}</h4>
-                                                <p className="text-gray-200 text-xs font-medium">{step.desc}</p>
+                                                <h4 className="text-base font-bold text-blue-900 uppercase tracking-tight">{step.title}</h4>
+                                                <p className="text-blue-900/70 text-xs font-medium">{step.desc}</p>
                                             </div>
                                         </div>
                                     ))}
