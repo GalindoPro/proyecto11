@@ -73,33 +73,33 @@ export function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="bg-blue-950 p-4 rounded-xl shadow-lg border border-blue-900 flex flex-col"
+                        className="bg-white p-4 rounded-xl shadow-lg border border-gray-200 flex flex-col"
                     >
-                        <div className="bg-white/10 w-9 h-9 rounded-lg flex items-center justify-center mb-3 text-yellow-500">
+                        <div className="bg-gray-50 w-9 h-9 rounded-lg flex items-center justify-center mb-3 text-yellow-500 border border-gray-100">
                             <Clock className="w-4 h-4" />
                         </div>
-                        <h3 className="text-base font-bold text-white mb-3 uppercase tracking-wider">Horario de Atención</h3>
+                        <h3 className="text-base font-bold text-blue-900 mb-3 uppercase tracking-wider">Horario de Atención</h3>
 
                         <ul className="space-y-3 flex-grow">
                             <li className="flex items-start gap-2">
                                 <Calendar className="w-3.5 h-3.5 text-yellow-500 mt-0.5" />
                                 <div>
-                                    <span className="block font-bold text-gray-100 text-[13px]">Lunes a Viernes</span>
-                                    <span className="text-[11px] text-gray-300">8:00 AM - 5:00 PM</span>
+                                    <span className="block font-bold text-gray-800 text-[13px]">Lunes a Viernes</span>
+                                    <span className="text-[11px] text-gray-600">8:00 AM - 5:00 PM</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-2">
                                 <Calendar className="w-3.5 h-3.5 text-yellow-500 mt-0.5" />
                                 <div>
-                                    <span className="block font-bold text-gray-100 text-[13px]">Sábado</span>
-                                    <span className="text-[11px] text-gray-300">8:00 AM - 12:00 PM</span>
+                                    <span className="block font-bold text-gray-800 text-[13px]">Sábado</span>
+                                    <span className="text-[11px] text-gray-600">8:00 AM - 12:00 PM</span>
                                 </div>
                             </li>
                             <li className="flex items-start gap-2">
-                                <Calendar className="w-3.5 h-3.5 text-red-400 mt-0.5" />
+                                <Calendar className="w-3.5 h-3.5 text-red-500 mt-0.5" />
                                 <div>
-                                    <span className="block font-bold text-red-400 text-[13px]">Domingo</span>
-                                    <span className="text-[11px] text-red-400">Cerrado</span>
+                                    <span className="block font-bold text-red-600 text-[13px]">Domingo</span>
+                                    <span className="text-[11px] text-red-500">Cerrado</span>
                                 </div>
                             </li>
                         </ul>

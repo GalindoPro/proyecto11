@@ -130,13 +130,13 @@ export function News() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="bg-blue-950 p-6 rounded-2xl shadow-lg border border-blue-900"
+                            className="bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
                         >
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="bg-white/10 p-2 rounded-lg text-yellow-500">
+                                <div className="bg-gray-50 p-2 rounded-lg text-yellow-500 border border-gray-100">
                                     <Building className="w-6 h-6" />
                                 </div>
-                                <h4 className="text-lg font-bold text-white uppercase tracking-tight">Agente BI</h4>
+                                <h4 className="text-lg font-bold text-blue-900 uppercase tracking-tight">Agente BI</h4>
                             </div>
 
                             <ul className="space-y-2">
@@ -149,7 +149,7 @@ export function News() {
                                     "Pago de transferencias",
                                     "Retiros monetarios"
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-center gap-2 text-gray-100">
+                                    <li key={i} className="flex items-center gap-2 text-gray-800">
                                         <CheckCircle2 className="w-3 h-3 text-yellow-500 flex-shrink-0" />
                                         <span className="text-[11px] font-medium uppercase tracking-tight">{item}</span>
                                     </li>
