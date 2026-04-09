@@ -15,9 +15,9 @@ const agencies = [
         image: agenciaCentralImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B024'32.7%22N+91%C2%B008'44.6%22W/@15.4090833,-91.1457222,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4090833,-91.1457222&t=&z=17&ie=UTF8&iwloc=&output=embed",
-        bg: "bg-blue-900",
-        textColor: "text-white",
-        iconBtnBg: "bg-white/10 text-yellow-500 hover:bg-white/20",
+        bg: "bg-white border-brand-mustard/20",
+        textColor: "text-brand-blue",
+        iconBtnBg: "bg-brand-blue/5 text-brand-blue hover:bg-brand-mustard/20",
         delay: 0,
         schedule: "Lun - Vie: 8:00 AM - 5:00 PM, Sáb: 8:00 AM - 12:00 PM"
     },
@@ -30,9 +30,9 @@ const agencies = [
         image: agenciaChajulImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B029'08.6%22N+91%C2%B002'13.2%22W/@15.4857222,-91.037,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4857222,-91.037&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        bg: "bg-white",
-        textColor: "text-blue-900",
-        iconBtnBg: "bg-blue-900/10 text-yellow-600 hover:bg-blue-900/20",
+        bg: "bg-white border-brand-mustard/20",
+        textColor: "text-brand-blue",
+        iconBtnBg: "bg-brand-blue/5 text-brand-blue hover:bg-brand-mustard/20",
         delay: 0.1,
         schedule: "Lun - Vie: 8:00 AM - 5:00 PM, Sáb: 8:00 AM - 12:00 PM"
     },
@@ -45,9 +45,9 @@ const agencies = [
         image: agenciaAculImg,
         mapLink: "https://www.google.com/maps/place/15%C2%B024'21.1%22N+91%C2%B011'15.0%22W/@15.4058522,-91.1875071,17z/",
         mapEmbed: "https://maps.google.com/maps?q=15.4058522,-91.1875071&t=&z=15&ie=UTF8&iwloc=&output=embed",
-        bg: "bg-yellow-500",
-        textColor: "text-blue-900",
-        iconBtnBg: "bg-blue-900/10 text-blue-900 hover:bg-blue-900/20",
+        bg: "bg-brand-mustard",
+        textColor: "text-brand-blue",
+        iconBtnBg: "bg-white/20 text-brand-blue hover:bg-white/40",
         delay: 0.2,
         schedule: "Lun - Vie: 8:00 AM - 5:00 PM, Sáb: 8:00 AM - 12:00 PM"
     }
@@ -63,23 +63,25 @@ export function Agencies() {
     };
 
     return (
-        <section id="agencias" className="py-12 bg-gray-50">
-            <div className="container mx-auto px-4">
+        <div className="flex flex-col">
+            <section id="agencias" className="py-12 bg-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-50/50 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+                <div className="container mx-auto px-4">
 
                 {/* Header */}
                 <div className="text-center mb-10 max-w-3xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="inline-block p-2 bg-primary/10 rounded-full mb-3"
+                        className="inline-block p-2 bg-brand-mustard/10 rounded-full mb-3"
                     >
-                        <MapPin className="w-6 h-6 text-primary" />
+                        <MapPin className="w-6 h-6 text-brand-mustard" />
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="text-2xl md:text-3xl font-bold text-gray-900 mb-2"
+                        className="text-2xl md:text-3xl font-bold text-brand-blue mb-2"
                     >
                         Nuestra Presencia
                     </motion.h2>
@@ -92,10 +94,15 @@ export function Agencies() {
                         Estamos cerca de ti para brindarte el respaldo financiero que mereces.
                     </motion.p>
                 </div>
+                </div>
+            </section>
 
-                {/* Agencies Grid */}
-                <div className="grid lg:grid-cols-3 gap-4">
-                    {agencies.map((agency) => (
+            {/* Agencies Grid */}
+            <section className="py-12 bg-brand-blue text-white relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -translate-x-1/2 translate-y-1/2" />
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {agencies.map((agency) => (
                         <motion.div
                             key={agency.id}
                             layoutId={agency.id}
@@ -107,7 +114,7 @@ export function Agencies() {
                             className={`${agency.bg} rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1`}
                         >
                             {/* Image Container */}
-                            <div className="relative h-48 bg-black/5 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-52 md:h-60 bg-black/5 flex items-center justify-center overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium p-4 text-center">
                                     <div className="flex flex-col items-center gap-2">
                                         <Building2 className="w-8 h-8 opacity-30" />
@@ -122,7 +129,7 @@ export function Agencies() {
                                 />
 
                                 {/* Badge */}
-                                <div className="absolute top-2 left-2 z-30 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full text-[10px] font-bold text-blue-900 shadow-sm border border-black/5 uppercase tracking-wider">
+                                <div className="absolute top-2 left-2 z-30 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full text-[10px] font-bold text-brand-blue shadow-sm border border-black/5 uppercase tracking-wider">
                                     {agency.subtitle}
                                 </div>
                             </div>
@@ -130,7 +137,7 @@ export function Agencies() {
                             {/* Info Section */}
                             <div className="p-4 flex-grow flex flex-col">
                                 <h3 className={`text-lg font-bold mb-0.5 uppercase tracking-tight ${agency.textColor}`}>{agency.name}</h3>
-                                <p className={`text-xs mb-3 line-clamp-2 font-medium leading-relaxed ${agency.textColor === 'text-white' ? 'text-white/80' : 'text-blue-900/80'}`}>
+                                <p className={`text-xs mb-3 line-clamp-2 font-medium leading-relaxed ${agency.textColor === 'text-white' ? 'text-white/80' : 'text-brand-blue/80'}`}>
                                     {agency.address}
                                 </p>
 
@@ -190,20 +197,20 @@ export function Agencies() {
                                     <div className="flex gap-2 mb-4 bg-black/20 p-1 rounded-xl w-fit self-center">
                                         <button
                                             onClick={() => setViewMode('image')}
-                                            className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${viewMode === 'image' ? 'bg-white text-blue-900 shadow-lg' : 'text-white/60 hover:text-white'}`}
+                                            className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${viewMode === 'image' ? 'bg-white text-brand-blue shadow-lg' : 'text-white/60 hover:text-white'}`}
                                         >
                                             Fotografía
                                         </button>
                                         <button
                                             onClick={() => setViewMode('map')}
-                                            className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${viewMode === 'map' ? 'bg-white text-blue-900 shadow-lg' : 'text-white/60 hover:text-white'}`}
+                                            className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${viewMode === 'map' ? 'bg-white text-brand-blue shadow-lg' : 'text-white/60 hover:text-white'}`}
                                         >
                                             Ubicación Exacta
                                         </button>
                                     </div>
 
                                     {/* Animation Area */}
-                                    <div className="flex-grow relative h-64 md:h-full min-h-[300px] rounded-2xl overflow-hidden bg-black/5 flex items-center justify-center">
+                                    <div className="flex-grow relative h-64 sm:h-80 md:h-full min-h-[350px] md:min-h-[500px] rounded-2xl overflow-hidden bg-black/5 flex items-center justify-center">
                                         <AnimatePresence mode="wait">
                                             {viewMode === 'image' ? (
                                                 <motion.img
@@ -241,7 +248,7 @@ export function Agencies() {
 
                                 {/* Modal Content */}
                                 <div className="w-full md:w-2/5 p-8 flex flex-col">
-                                    <span className="text-yellow-500 font-bold tracking-widest uppercase text-sm mb-2">
+                                    <span className="text-brand-mustard font-bold tracking-widest uppercase text-sm mb-2">
                                         {selectedAgency.subtitle}
                                     </span>
                                     <h3 className={`text-3xl font-bold mb-6 ${selectedAgency.textColor}`}>
@@ -250,36 +257,36 @@ export function Agencies() {
 
                                     <div className="space-y-6 flex-grow">
                                         <div className="flex items-start gap-4">
-                                            <div className="bg-white/10 p-2 rounded-lg text-yellow-500">
+                                            <div className="bg-white/10 p-2 rounded-lg text-brand-mustard">
                                                 <MapPin className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <h4 className={`font-bold ${selectedAgency.textColor}`}>Ubicación</h4>
-                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-blue-900/70'}>
+                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-brand-blue/70'}>
                                                     {selectedAgency.address}
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex items-start gap-4">
-                                            <div className="bg-white/10 p-2 rounded-lg text-yellow-500">
+                                            <div className="bg-white/10 p-2 rounded-lg text-brand-mustard">
                                                 <Phone className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <h4 className={`font-bold ${selectedAgency.textColor}`}>Teléfono</h4>
-                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-blue-900/70'}>
+                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-brand-blue/70'}>
                                                     +502 {selectedAgency.phone}
                                                 </p>
                                             </div>
                                         </div>
 
                                         <div className="flex items-start gap-4">
-                                            <div className="bg-white/10 p-2 rounded-lg text-yellow-500">
+                                            <div className="bg-white/10 p-2 rounded-lg text-brand-mustard">
                                                 <Clock className="w-5 h-5" />
                                             </div>
                                             <div>
                                                 <h4 className={`font-bold ${selectedAgency.textColor}`}>Horario</h4>
-                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-blue-900/70'}>
+                                                <p className={selectedAgency.textColor === 'text-white' ? 'text-white/70' : 'text-brand-blue/70'}>
                                                     {selectedAgency.schedule}
                                                 </p>
                                             </div>
@@ -310,9 +317,9 @@ export function Agencies() {
                             </motion.div>
                         </div>
                     )}
-                </AnimatePresence>
-
-            </div>
-        </section>
+                    </AnimatePresence>
+                </div>
+            </section>
+        </div>
     );
 }

@@ -18,7 +18,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Preloader />
-      <div className="min-h-screen bg-gray-50 flex flex-col font-sans text-gray-900">
+      <div className="min-h-screen bg-brand-blue flex flex-col font-sans text-white">
         <Header />
         <main className="flex-grow pt-36">
           <Routes>

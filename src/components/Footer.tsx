@@ -10,7 +10,7 @@ const MessengerIcon = ({ className }: { className?: string }) => (
 
 export function Footer() {
     return (
-        <footer className="relative bg-blue-900 text-gray-100 pt-4 pb-1" id="contacto">
+        <footer className="relative bg-brand-blue text-gray-100 pt-4 pb-1" id="contacto">
             {/* Wave SVG at the top */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
                 <svg
@@ -21,7 +21,7 @@ export function Footer() {
                 >
                     <motion.path
                         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        fill="#f3f4f6"
+                        fill="#ffffff"
                         initial={{ y: 0 }}
                         animate={{ y: [0, -3, 0] }}
                         transition={{
@@ -34,10 +34,10 @@ export function Footer() {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 border-b border-blue-700/50 pb-4 mt-2">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 border-b border-white/20/50 pb-4 mt-2">
                     {/* Colon 1: Identidad */}
                     <div className="space-y-1">
-                        <h4 className="text-lg font-bold text-yellow-500 tracking-tight">COMIF, R.L.</h4>
+                        <h4 className="text-lg font-bold text-brand-mustard tracking-tight">COMIF, R.L.</h4>
                         <p className="text-xs text-gray-300 leading-relaxed max-w-xs">
                             Desde 2008, impulsando el bienestar financiero de nuestra comunidad con honestidad y transparencia.
                         </p>
@@ -48,11 +48,11 @@ export function Footer() {
                         <h4 className="text-sm font-bold text-white uppercase tracking-widest">Contacto</h4>
                         <div className="space-y-1">
                             <p className="flex items-start gap-2 text-xs text-gray-300">
-                                <Building2 className="w-4 h-4 text-yellow-500 flex-shrink-0" />
+                                <Building2 className="w-4 h-4 text-brand-mustard flex-shrink-0" />
                                 Cantón Vipila, Nebaj, Quiché
                             </p>
-                            <a href="mailto:comifrl@gmail.com" className="flex items-center gap-2 text-xs text-gray-300 hover:text-yellow-400 transition-colors">
-                                <Mail className="w-4 h-4 text-yellow-500" />
+                            <a href="mailto:comifrl@gmail.com" className="flex items-center gap-2 text-xs text-gray-300 hover:text-brand-mustard/90 transition-colors">
+                                <Mail className="w-4 h-4 text-brand-mustard" />
                                 comifrl@gmail.com
                             </a>
                         </div>
@@ -64,7 +64,7 @@ export function Footer() {
                         <div className="flex flex-col sm:flex-row md:flex-col gap-1.5">
                             <Link
                                 to="/afiliacion"
-                                className="inline-flex items-center justify-center gap-2 bg-yellow-500 text-blue-900 px-3 py-1.5 rounded-lg font-bold text-xs hover:bg-yellow-400 transition-all shadow-md hover:scale-105 active:scale-95"
+                                className="inline-flex items-center justify-center gap-2 bg-brand-mustard text-white px-3 py-1.5 rounded-lg font-bold text-xs hover:bg-brand-mustard/90 transition-all shadow-md hover:scale-105 active:scale-95"
                             >
                                 <UserPlus className="w-4 h-4" />
                                 Hazte socio
@@ -73,7 +73,7 @@ export function Footer() {
                                 to="/agencias"
                                 className="inline-flex items-center justify-center gap-2 bg-white/10 text-white px-3 py-1.5 rounded-lg font-bold text-xs hover:bg-white/20 transition-all border border-white/10"
                             >
-                                <Building2 className="w-4 h-4 text-yellow-500" />
+                                <Building2 className="w-4 h-4 text-brand-mustard" />
                                 Nuestras Agencias
                             </Link>
                         </div>
@@ -91,7 +91,7 @@ export function Footer() {
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-blue-800 p-1.5 rounded-full hover:bg-blue-600 transition-colors text-gray-100 shadow-sm"
+                                className="bg-white/10 p-1.5 rounded-full hover:bg-brand-mustard transition-colors text-gray-100 shadow-sm border border-white/5"
                                 aria-label="Facebook"
                             >
                                 <Facebook className="w-4 h-4" />
@@ -102,7 +102,7 @@ export function Footer() {
                                 rel="noopener noreferrer"
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-blue-800 p-1.5 rounded-full hover:bg-blue-500 transition-colors text-gray-100 shadow-sm"
+                                className="bg-white/10 p-1.5 rounded-full hover:bg-brand-mustard transition-colors text-gray-100 shadow-sm border border-white/5"
                                 aria-label="Messenger"
                             >
                                 <MessengerIcon className="w-4 h-4" />

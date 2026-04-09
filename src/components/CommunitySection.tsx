@@ -5,32 +5,32 @@ const communityHighlights = [
         title: "Apoyo a la Producción Local",
         description: "Impulsamos a los pequeños productores conectándolos con mercados justos y financiamiento a medida.",
         tags: ["Agricultura", "Comercio"],
-        imagePlaceholder: "bg-amber-100", // Placeholder color
+        imagePlaceholder: "bg-brand-mustard/10", // Placeholder color
     },
     {
         title: "Educación y Futuro",
         description: "Celebramos el talento de nuestros jóvenes con becas y programas de formación técnica.",
         tags: ["Jóvenes", "Educación"],
-        imagePlaceholder: "bg-blue-100",
+        imagePlaceholder: "bg-brand-blue/10",
     },
     {
         title: "Tradición y Cultura",
         description: "Preservamos nuestras raíces apoyando las festividades y artes de nuestra comunidad.",
         tags: ["Cultura", "Arte"],
-        imagePlaceholder: "bg-rose-100",
+        imagePlaceholder: "bg-brand-mustard/20",
     },
 ];
 
 export function CommunitySection() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-gradient-to-tr from-white to-yellow-50/10">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-primary font-bold text-sm tracking-widest uppercase mb-2 block"
+                        className="text-brand-mustard font-bold text-sm tracking-widest uppercase mb-2 block"
                     >
                         Nuestra Esencia
                     </motion.span>
@@ -39,7 +39,7 @@ export function CommunitySection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
+                        className="text-3xl md:text-5xl font-bold text-brand-blue mb-6"
                     >
                         Compromiso con la Comunidad
                     </motion.h2>
@@ -66,7 +66,7 @@ export function CommunitySection() {
                         >
                             {/* Image Placeholder Container */}
                             <div className={`relative h-64 w-full rounded-2xl overflow-hidden mb-6 ${item.imagePlaceholder} transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-xl`}>
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:text-gray-500 transition-colors">
+                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:text-white/60 transition-colors">
                                     {/* Placeholder Text/Icon */}
                                     <span className="font-medium">Imagen: {item.title}</span>
                                 </div>
@@ -77,15 +77,15 @@ export function CommunitySection() {
                             <div className="space-y-3">
                                 <div className="flex gap-2">
                                     {item.tags.map((tag, i) => (
-                                        <span key={i} className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                                        <span key={i} className="text-xs font-bold text-brand-mustard bg-brand-mustard/10 px-3 py-1 rounded-full">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                                <h3 className="text-2xl font-bold text-brand-blue group-hover:text-brand-mustard transition-colors">
                                     {item.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-gray-700 leading-relaxed">
                                     {item.description}
                                 </p>
                             </div>
