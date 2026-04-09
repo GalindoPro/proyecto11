@@ -60,7 +60,7 @@ export function Header() {
                     className="flex items-center gap-3 group"
                     onClick={() => handleNavClick('/')}
                 >
-                    <div className="relative w-64 h-16 md:w-72 md:h-20 overflow-hidden rounded-xl bg-white/5 flex items-center justify-center shadow-xl p-1.5 group-hover:scale-105 transition-transform duration-300">
+                    <div className="relative w-48 h-12 sm:w-64 sm:h-16 md:w-72 md:h-20 overflow-hidden rounded-xl bg-white/5 flex items-center justify-center shadow-xl p-1.5 group-hover:scale-105 transition-transform duration-300">
                         <img
                             src={logoImg}
                             alt="COMIF Logo"

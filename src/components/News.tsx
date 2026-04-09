@@ -98,7 +98,7 @@ export function News() {
                         </div>
 
                         {/* Images Side */}
-                        <div className="grid grid-rows-2 h-full min-h-[400px] lg:min-h-auto">
+                        <div className="grid grid-rows-2 h-[400px] md:h-[500px] lg:h-auto">
                             {/* Image 1: Comunidad San Juan Acul */}
                             <div className="relative bg-gray-200 overflow-hidden group">
                                 <img

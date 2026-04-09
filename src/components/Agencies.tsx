@@ -114,7 +114,7 @@ export function Agencies() {
                             className={`${agency.bg} rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col group cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1`}
                         >
                             {/* Image Container */}
-                            <div className="relative h-48 bg-black/5 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-52 md:h-60 bg-black/5 flex items-center justify-center overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium p-4 text-center">
                                     <div className="flex flex-col items-center gap-2">
                                         <Building2 className="w-8 h-8 opacity-30" />
@@ -210,7 +210,7 @@ export function Agencies() {
                                     </div>
 
                                     {/* Animation Area */}
-                                    <div className="flex-grow relative h-64 md:h-full min-h-[300px] rounded-2xl overflow-hidden bg-black/5 flex items-center justify-center">
+                                    <div className="flex-grow relative h-64 sm:h-80 md:h-full min-h-[350px] md:min-h-[500px] rounded-2xl overflow-hidden bg-black/5 flex items-center justify-center">
                                         <AnimatePresence mode="wait">
                                             {viewMode === 'image' ? (
                                                 <motion.img

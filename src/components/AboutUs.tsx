@@ -30,7 +30,7 @@ export function AboutUs() {
                                 <img
                                     src={corazonIxilImg}
                                     alt="Nebaj, Corazón Ixil"
-                                    className="w-28 h-28 md:w-36 md:h-36 object-contain"
+                                    className="w-32 h-32 md:w-44 md:h-44 object-contain"
                                 />
                             </div>
                         </motion.div>
@@ -54,7 +54,7 @@ export function AboutUs() {
                                 <img
                                     src={raizIxilImg}
                                     alt="Raíces Ixiles"
-                                    className="w-28 h-28 md:w-36 md:h-36 object-contain"
+                                    className="w-32 h-32 md:w-44 md:h-44 object-contain"
                                 />
                             </div>
                             <div className="flex-1">
@@ -82,7 +82,7 @@ export function AboutUs() {
                                 <img
                                     src={misionImg}
                                     alt="Misión"
-                                    className="w-20 h-20 object-contain rounded-lg"
+                                    className="w-16 h-16 md:w-24 md:h-24 object-contain rounded-lg"
                                 />
                             </div>
                             <div>
@@ -104,7 +104,7 @@ export function AboutUs() {
                                 <img
                                     src={visionImg}
                                     alt="Visión"
-                                    className="w-20 h-20 object-contain rounded-lg"
+                                    className="w-16 h-16 md:w-24 md:h-24 object-contain rounded-lg"
                                 />
                             </div>
                             <div>

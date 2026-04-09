@@ -59,7 +59,7 @@ export function Testimonials() {
                             <img
                                 src={t.image}
                                 alt={t.name}
-                                className="w-12 h-12 rounded-full mb-3 border-2 border-brand-mustard/30 shadow-md bg-white"
+                                className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4 border-4 border-brand-mustard/30 shadow-lg bg-white object-cover"
                             />
                             <div className="mb-3 flex-grow">
                                 <p className="text-gray-700 italic text-base leading-relaxed">

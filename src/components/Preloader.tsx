@@ -43,7 +43,7 @@ export function Preloader() {
                                 stiffness: 260,
                                 damping: 20,
                             }}
-                            className="relative w-64 h-64 bg-white/5 p-6 rounded-3xl shadow-2xl flex items-center justify-center"
+                            className="relative w-48 h-48 md:w-64 md:h-64 bg-white/5 p-4 md:p-6 rounded-3xl shadow-2xl flex items-center justify-center"
                         >
                             <img
                                 src={comifLogo}
