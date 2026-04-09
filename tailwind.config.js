@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         brand: {
-          blue: '#031254',
+          blue: '#0F0E47',
           mustard: '#BF9903',
         }
       },

@@ -21,7 +21,7 @@ const advantages = [
         icon: (
             <svg viewBox="0 0 24 24" fill="none" className="w-16 h-16" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2.5" />
-                <path d="M12 16V8M12 8L8 12M12 8L16 12" stroke="#031254" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 16V8M12 8L8 12M12 8L16 12" stroke="#0F0E47" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
         ),
         title: "TASAS COMPETITIVAS",
