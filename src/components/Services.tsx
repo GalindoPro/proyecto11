@@ -43,7 +43,7 @@ const services = [
         description: "Haz realidad el sueño de tu hogar con nuestro financiamiento.",
         benefits: [
             "Financiamiento hasta el 80%",
-            "Plazos hasta 20 años",
+            "Plazos hasta 6-15 años mayor = Q.500,000.00",
             "Tasas competitivas",
             "Asesoría personalizada"
         ],
