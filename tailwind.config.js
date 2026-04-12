@@ -8,7 +8,11 @@ export default {
     extend: {
       colors: {
         brand: {
+<<<<<<< HEAD
           blue: '#0F0E47',
+=======
+          blue: '#000066',
+>>>>>>> development
           mustard: '#BF9903',
         }
       },

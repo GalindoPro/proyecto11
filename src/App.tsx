@@ -8,6 +8,7 @@ import { News } from "./components/News";
 import { Affiliation } from "./components/Affiliation";
 import { Contact } from "./components/Contact";
 import { Agencies } from "./components/Agencies";
+import { AssemblyGalleryPage } from "./pages/AssemblyGalleryPage";
 import { Footer } from "./components/Footer";
 import { Preloader } from "./components/Preloader";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -30,6 +31,7 @@ function App() {
             <Route path="/afiliacion" element={<Affiliation />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/agencias" element={<Agencies />} />
+            <Route path="/asamblea" element={<AssemblyGalleryPage />} />
             {/* Add other routes as needed or use placeholders */}
             <Route path="*" element={<Home />} />
           </Routes>
