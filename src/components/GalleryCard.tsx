@@ -74,7 +74,7 @@ HoverIcon.displayName = "HoverIcon";
 // ─── Framer Motion variants (defined outside component — stable references) ──
 const imageVariants = {
   rest:  { scale: 1 },
-  hover: { scale: 1.06, transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] } },
+  hover: { scale: 1.06, transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 };
 
 const overlayVariants = {
@@ -89,7 +89,7 @@ const iconVariants = {
 
 const captionVariants = {
   rest:  { y: "100%", opacity: 0 },
-  hover: { y: "0%",   opacity: 1, transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] } },
+  hover: { y: "0%",   opacity: 1, transition: { duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as const } },
 };
 
 const badgeVariants = {
