@@ -13,6 +13,7 @@ const navItems = [
     { name: 'Cotizar', href: '/cotizar', color: 'text-brand-mustard/90', hColor: 'hover:text-brand-mustard/80', bgColor: 'bg-brand-mustard' },
     { name: 'Agencias', href: '/agencias', color: 'text-brand-mustard/90', hColor: 'hover:text-brand-mustard/80', bgColor: 'bg-brand-mustard' },
     { name: 'Noticias', href: '/noticias', color: 'text-brand-mustard/90', hColor: 'hover:text-brand-mustard/80', bgColor: 'bg-brand-mustard' },
+    { name: 'Asamblea', href: '/asamblea', color: 'text-brand-mustard/90', hColor: 'hover:text-brand-mustard/80', bgColor: 'bg-brand-mustard' },
     { name: 'Asóciate', href: '/afiliacion', color: 'text-brand-mustard/90', hColor: 'hover:text-brand-mustard/80', bgColor: 'bg-brand-mustard' },
 ];
 

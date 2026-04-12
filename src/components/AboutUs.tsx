@@ -23,7 +23,7 @@ export function AboutUs() {
                             <div className="flex-1">
                                 <h3 className="text-xl md:text-3xl font-black text-brand-blue mb-4 text-center md:text-left">Nebaj, corazón ixil</h3>
                                 <p className="text-gray-700 leading-relaxed text-base text-center md:text-left font-medium">
-                                    Santa María Nebaj, "Na’b’a’" en idioma ixil, significa ‘lugar donde nace el agua’. Es un municipio cultural y económico clave del departamento de Quiché, donde nuestras raíces se entrelazan con la historia de un pueblo resiliente.
+                                    Santa María Nebaj, "Na'b'a'" en idioma ixil, significa 'lugar donde nace el agua'. Es un municipio cultural y económico clave del departamento de Quiché, donde nuestras raíces se entrelazan con la historia de un pueblo resiliente.
                                 </p>
                             </div>
                             <div className="flex-shrink-0 bg-brand-mustard/10 p-3 rounded-2xl border border-brand-mustard/20 shadow-lg">
