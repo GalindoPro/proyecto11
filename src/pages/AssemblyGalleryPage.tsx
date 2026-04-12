@@ -15,6 +15,7 @@ import {
   Heart,
   Home,
   ArrowRight,
+  Briefcase,
 } from "lucide-react";
 import { cn } from "../lib/utils";
 import { PhotoLightbox } from "../components/PhotoLightbox";
@@ -28,9 +29,10 @@ import asamblea3 from "../assets/images/assembly/3.png";
 import asamblea4 from "../assets/images/assembly/4.png";
 import asamblea5 from "../assets/images/assembly/5.png";
 import asamblea6 from "../assets/images/assembly/6.png";
+import asamblea8 from "../assets/images/assembly/8.png";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
-type Category = "all" | "general" | "directiva" | "participacion";
+type Category = "all" | "general" | "directiva" | "participacion" | "gerente";
 
 interface AssemblyPhoto extends LightboxPhoto {
   category: Exclude<Category, "all">;
@@ -49,7 +51,7 @@ const PHOTOS: AssemblyPhoto[] = [
     id: 2,
     src: asamblea2,
     alt: "Mesa directiva de COMIF R.L. durante la presentación del informe anual",
-    caption: "Mesa directiva presentando el informe anual 2024",
+    caption: "Mesa directiva presentando el informe anual 2026",
     category: "directiva",
   },
   {
@@ -69,8 +71,8 @@ const PHOTOS: AssemblyPhoto[] = [
   {
     id: 5,
     src: asamblea5,
-    alt: "Asociados atentos a la presentación de resultados financieros 2024",
-    caption: "Presentación de resultados financieros 2024",
+    alt: "Asociados atentos a la presentación de resultados financieros 2026",
+    caption: "Presentación de resultados financieros 2026",
     category: "participacion",
   },
   {
@@ -80,6 +82,13 @@ const PHOTOS: AssemblyPhoto[] = [
     caption: "Mesa directiva al cierre de la asamblea",
     category: "directiva",
   },
+  {
+    id: 8,
+    src: asamblea8,
+    alt: "Gerente General de FEDERURAL durante la Asamblea General de COMIF R.L.",
+    caption: "Gerente General de FEDERURAL",
+    category: "gerente",
+  },
 ];
 
 const FILTERS: { id: Category; label: string; icon: React.ElementType }[] = [
@@ -87,6 +96,7 @@ const FILTERS: { id: Category; label: string; icon: React.ElementType }[] = [
   { id: "general", label: "Vista General", icon: Eye },
   { id: "directiva", label: "Mesa Directiva", icon: Users },
   { id: "participacion", label: "Participación", icon: Heart },
+  { id: "gerente", label: "Gerente FEDERURAL", icon: Briefcase },
 ];
 
 const STATS = [
@@ -172,19 +182,19 @@ export function AssemblyGalleryPage() {
   return (
     <>
       {/* ── SEO / Document metadata (React 19) ─────────────────────────── */}
-      <title>Asamblea General de Asociados 2024 | COMIF R.L.</title>
+      <title>Asamblea General de Asociados 2026 | COMIF R.L.</title>
       <meta
         name="description"
-        content="Galería fotográfica oficial de la Asamblea General Ordinaria de COMIF R.L. 2024. Más de 500 asociados reunidos en Nebaj, Quiché para aprobar resoluciones y proyectos estratégicos."
+        content="Galería fotográfica oficial de la Asamblea General Ordinaria de COMIF R.L. 2026. Más de 500 asociados reunidos en Nebaj, Quiché para aprobar resoluciones y proyectos estratégicos."
       />
       <meta
         name="keywords"
-        content="asamblea general, COMIF, cooperativa Ixil, nebaj, Quiché, galería fotográfica, resoluciones 2024"
+        content="asamblea general, COMIF, cooperativa Ixil, nebaj, Quiché, galería fotográfica, resoluciones 2026"
       />
-      <meta property="og:title" content="Asamblea General COMIF R.L. 2024" />
+      <meta property="og:title" content="Asamblea General COMIF R.L. 2026" />
       <meta
         property="og:description"
-        content="Registro fotográfico de la Asamblea General Ordinaria 2024 de COMIF R.L."
+        content="Registro fotográfico de la Asamblea General Ordinaria 2026 de COMIF R.L."
       />
       <meta property="og:type" content="article" />
 
@@ -207,7 +217,7 @@ export function AssemblyGalleryPage() {
       {/* ══════════════════════════════════════════════════════════════════ */}
       <section
         className="relative h-[62vh] sm:h-[68vh] lg:h-[75vh] overflow-hidden"
-        aria-label="Portada de la Asamblea General 2024"
+        aria-label="Portada de la Asamblea General 2026"
       >
         {/* Background image */}
         <img
@@ -255,7 +265,7 @@ export function AssemblyGalleryPage() {
                 <ChevronRight className="w-3 h-3 text-white/30" />
               </li>
               <li className="text-white/90" aria-current="page">
-                Asamblea General 2024
+                Asamblea General 2026
               </li>
             </ol>
           </motion.nav>
@@ -271,7 +281,7 @@ export function AssemblyGalleryPage() {
               className="inline-flex items-center gap-2 bg-brand-mustard/90 text-brand-blue px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 shadow-lg"
             >
               <Camera className="w-3 h-3" aria-hidden="true" />
-              Galería Oficial · 2024
+              Galería Oficial · 2026
             </motion.div>
 
             {/* H1 */}
@@ -283,7 +293,7 @@ export function AssemblyGalleryPage() {
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
             >
               Asamblea General
-              <span className="block text-brand-mustard">de Asociados 2024</span>
+              <span className="block text-brand-mustard">de Asociados 2026</span>
             </motion.h1>
 
             {/* Description */}
@@ -296,7 +306,7 @@ export function AssemblyGalleryPage() {
             >
               Registro fotográfico de nuestra Asamblea General Ordinaria celebrada
               en Nebaj, Quiché. Más de 500 asociados reunidos para definir el
-              rumbo institucional y aprobar las resoluciones del ejercicio 2024.
+              rumbo institucional y aprobar las resoluciones del ejercicio 2026.
             </motion.p>
 
             {/* CTA + meta row */}
@@ -323,7 +333,7 @@ export function AssemblyGalleryPage() {
               <div className="flex items-center gap-4 text-white/55 text-xs font-medium">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-3.5 h-3.5 text-brand-mustard" aria-hidden="true" />
-                  Febrero 2024
+                  Abril 2026
                 </span>
                 <span className="w-px h-4 bg-white/20" aria-hidden="true" />
                 <span className="flex items-center gap-1.5">
@@ -527,7 +537,7 @@ export function AssemblyGalleryPage() {
               Datos de la Sesión
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-              Asamblea General Ordinaria 2024
+              Asamblea General Ordinaria 2026
             </h2>
             <div className="h-0.5 w-20 bg-brand-mustard mx-auto rounded-full" />
           </motion.div>
@@ -609,7 +619,7 @@ export function AssemblyGalleryPage() {
               </h3>
               <dl className="space-y-4">
                 {[
-                  { label: "Fecha", value: "Febrero 2024" },
+                  { label: "Fecha", value: "Abril 2026" },
                   { label: "Lugar", value: "Salón Municipal, Nebaj, Quiché" },
                   { label: "Tipo de sesión", value: "Asamblea General Ordinaria" },
                   { label: "Duración", value: "Jornada completa" },
