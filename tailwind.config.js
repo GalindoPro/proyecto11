@@ -8,16 +8,20 @@ export default {
     extend: {
       colors: {
         brand: {
-<<<<<<< HEAD
-          blue: '#0F0E47',
-=======
           blue: '#000066',
->>>>>>> development
           mustard: '#BF9903',
         }
       },
+      keyframes: {
+        'spin-once': {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+        }
+      },
+      animation: {
+        'spin-once': 'spin-once 0.6s ease-in-out',
+      }
     },
   },
   plugins: [],
 }
-
